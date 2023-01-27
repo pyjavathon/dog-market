@@ -11,11 +11,12 @@ import io.swagger.v3.oas.models.info.Info;
 @Configuration
 public class SwaggerConfig {
 
+	
 	@Bean
-	  public OpenAPI openAPI(@Value("${springdoc.version}") String springdocVersion) {
+	  public OpenAPI openAPI() {
 	    Info info = new Info()
 	        .title("Dog Market API")
-	        .version(springdocVersion)
+	        .version("v1.0.0")
 	        .description("Dog Market API입니다.");
 
 	    return new OpenAPI()

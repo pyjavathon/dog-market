@@ -18,6 +18,3 @@ spring:
       hibernate:
         format_sql: true #To beautify or pretty print the SQL
      
-springdoc:
-  version: v1.0.0
-  packages-to-scan: com.example.demo
