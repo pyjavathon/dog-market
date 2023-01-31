@@ -18,3 +18,4 @@ spring:
       hibernate:
         format_sql: true #To beautify or pretty print the SQL
      
+#swagger 주소: http://localhost:8080/dog-market/swagger-ui/index.html

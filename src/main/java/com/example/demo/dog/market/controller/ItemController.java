@@ -42,13 +42,9 @@ public class ItemController {
 		
 	}
 	
-	@Operation(summary = "item list search method", description = "item list search method description")
-	@ApiResponses(value= {
-			@ApiResponse(responseCode = "200",description = "successful operation"),
-			@ApiResponse(responseCode = "404", description = "not found")
-	})
-	@GetMapping(value = "/searchItem")
-	public @ResponseBody List<Item> getItemList(@RequestParam(required = false) String itemId) {
+
+	@GetMapping(value = "/searchItems")
+	public @ResponseBody List<Item> getItemList() {
 		return itemService.getItemList();
 	}
 	
