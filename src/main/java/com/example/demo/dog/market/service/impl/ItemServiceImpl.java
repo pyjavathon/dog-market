@@ -1,5 +1,7 @@
 package com.example.demo.dog.market.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +19,22 @@ public class ItemServiceImpl implements ItemService{
 		
 		itemRepo.save(item);
 	}
+
+	@Override
+	public List<Item> getItemList() {
+		return itemRepo.findAll();
+	}
+	
+	@Override
+	public Item selectOneItem(String itemId) {
+		return itemRepo.findById(itemId).orElseThrow(null);
+	}
+
+	@Override
+	public void itemDelete(String itemId) {
+		itemRepo.deleteById(itemId);
+	}
+
+	
 
 }
